@@ -1,0 +1,22 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+flake8 = "*"
+flake8-docstrings = "*"
+jupyter = "*"
+pep8-naming = "*"
+pytest = "*"
+requests = "*"
+
+[packages]
+fastapi = "*"
+pandas = "*"
+plotly = "*"
+sqlalchemy = "*"
+uvicorn = {extras = ["standard"], version = "*"}
+
+[requires]
+python_version = "3"
