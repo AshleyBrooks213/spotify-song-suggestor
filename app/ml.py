@@ -2,18 +2,37 @@
 
 import logging
 import random
+import pickle
 
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException
 import pandas as pd
 from pydantic import BaseModel, Field, validator
+
+
+"""Load Model"""
+# loaded_model = pickle.load(open"", 'rb')
+
+"""Load vectorizer"""
+# loaded_vectorizer = pickle.load(open("", 'rb'))
+
+"""EDA GOES HERE"""
+
 
 log = logging.getLogger(__name__)
 router = APIRouter()
 
 
+"""List of SONGS"""
+# song_list = {}
+
+
+"""LIST OF ANOTHER ATTRIBUTE FOR USER TO INPUT"""
+# other_list = {}
+
+
 class Item(BaseModel):
     """Use this data model to parse the request body JSON."""
-
+    # INCLUDE EXAMPLE HERE!
     x1: float = Field(..., example=3.14)
     x2: int = Field(..., example=-42)
     x3: str = Field(..., example='banjo')
@@ -46,11 +65,19 @@ async def predict(item: Item):
 
     Replace the placeholder docstring and fake predictions with your own model.
     """
-    X_new = item.to_df()
-    log.info(X_new)
-    y_pred = random.choice([True, False])
-    y_pred_proba = random.random() / 2 + 0.5
-    return {
-        'prediction': y_pred,
-        'probability': y_pred_proba
-    }
+    user_song_list = item.COLUMN_NAME_HERE.split(',')
+    other_user_list = item.COLUMN_NAME_HERE.split(',')
+    for song in user_song_list:
+        if song not in song_list:
+            raise HTTPException(status_code=404, detail=f'Song {song} not found')
+    for other in other_user_list:
+        if other not in other_user_list:
+            raise HTTPException(status_code=404, detail=f'Other {other} not found')
+    #X_new = item.to_df()
+    #log.info(X_new)
+    #y_pred = random.choice([True, False])
+    #y_pred_proba = random.random() / 2 + 0.5
+    #return {
+    #    'prediction': y_pred,
+    #    'probability': y_pred_proba
+    #}

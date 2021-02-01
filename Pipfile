@@ -13,10 +13,11 @@ requests = "*"
 
 [packages]
 fastapi = "*"
-pandas = "*"
+pandas = "==1.1.5"
 plotly = "*"
 sqlalchemy = "*"
 uvicorn = {extras = ["standard"], version = "*"}
+numpy = "==1.19.3"
 
 [requires]
 python_version = "3"
