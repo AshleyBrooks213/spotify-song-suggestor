@@ -15,8 +15,9 @@ log = logging.getLogger(__name__)
 router = APIRouter()
 
 url = 'https://raw.githubusercontent.com/boscolio/spotify_data/main/spotify.csv'
+path = 'app/spotify.csv'
 
-df = pd.read_csv(url, index_col=[0])
+df = pd.read_csv(path, index_col=[0])
 model = NearestNeighbors(n_neighbors=11)
 model.fit(df[df.columns[2:13]])
 
