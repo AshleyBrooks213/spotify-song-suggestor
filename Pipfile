@@ -18,6 +18,8 @@ plotly = "*"
 sqlalchemy = "*"
 uvicorn = {extras = ["standard"], version = "*"}
 numpy = "==1.19.3"
+requests = "*"
+sklearn = "*"
 
 [requires]
 python_version = "3"
