@@ -85,7 +85,7 @@ testpath==0.4.4
 threadpoolctl==2.1.0
 toml==0.10.2
 tornado==6.1
-traitlets==5.0.5
+traitlets==4.3.3
 urllib3==1.26.3
 uvicorn==0.13.3
 uvloop==0.14.0
