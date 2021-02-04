@@ -39,7 +39,7 @@ async def predict(song='Float On', artist=0):
 
     # Dataframe of results saved to csv
     df_nn = df.loc[new_obs]
-    df_nn.to_csv(r'app/results.csv', index = False, header = True) 
+    df_nn.to_csv('app/results.csv', index = False, header = True) 
 
     # Assign songs and artists to a dictionary
     names = df_nn[['name', 'artists']]
