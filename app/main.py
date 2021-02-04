@@ -20,6 +20,8 @@ To use these interactive docs:
     your returned predictions on.
 - Click the **Execute** button
 - Scroll down to see the Server response Code & Details
+\n
+\n
 Created by: 
 Nicholas Adamski - Ashley Brooks - Ricky Chance - Shannon Li
 """
