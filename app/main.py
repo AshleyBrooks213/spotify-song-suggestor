@@ -5,20 +5,28 @@ import uvicorn
 from app import db, ml, viz, ml2, model
 
 description = """
-Edit your app's title and description. See [https://fastapi.tiangolo.com/tutorial/metadata/](https://fastapi.tiangolo.com/tutorial/metadata/)
-
+This web app is designed to predict the top 10 songs a user may be interested in,
+a list of artists, and a dataframe that contains all of the information associated 
+with the predictions. 
+In order to base your prediction on a different artist, simply look at the list, 
+find the artist you want and the number associated with it, and plug the number
+into the model artist query.
+Doing this will change the prediction outcome.
+You can also change the song title in the model song query.
 To use these interactive docs:
-- Click on an endpoint below
+- Click on an endpoint below (Model)
 - Click the **Try it out** button
-- Edit the Request body or any parameters
+- Input song title and the number of the artist you would like to base
+    your returned predictions on.
 - Click the **Execute** button
 - Scroll down to see the Server response Code & Details
+Created by: 
+Nicholas Adamski - Ashley Brooks - Ricky Chance - Shannon Li
 """
-
 app = FastAPI(
     title='Spotify Song Suggestor',
     description=description,
-    docs_url='/',
+    docs_url='/https://github.com/AshleyBrooks213/spotify-song-suggestor',
 )
 
 #app.include_router(db.router, tags=['Database'])
