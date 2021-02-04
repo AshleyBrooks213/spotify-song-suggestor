@@ -23,7 +23,7 @@ model.fit(df[df.columns[2:13]])
 
 
 @router.get('/model')
-async def predict(song='Float On', artist=0):
+async def predict(song='Summertime', artist=0):
 
     # Assign input matches to a series
     obs = df.index[df['name'] == song]
@@ -35,7 +35,7 @@ async def predict(song='Float On', artist=0):
     new_obs = neighbors[1][int(artist)][1:11]
 
     # Display artist and spotify id of all songs that match the input
-    artist_list = df.iloc[obs, 1]
+    artist_list = df.iloc[obs, 1].reset_index(drop=True)
 
     # Dataframe of results saved to csv
     df_nn = df.loc[new_obs]
@@ -46,4 +46,3 @@ async def predict(song='Float On', artist=0):
     names_dict = names.to_dict(orient='records')
 
     return names_dict, artist_list, df_nn
-
