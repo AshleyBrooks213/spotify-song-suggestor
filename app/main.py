@@ -23,10 +23,11 @@ To use these interactive docs:
 Created by: 
 Nicholas Adamski - Ashley Brooks - Ricky Chance - Shannon Li
 """
+
 app = FastAPI(
     title='Spotify Song Suggestor',
     description=description,
-    docs_url='/https://github.com/AshleyBrooks213/spotify-song-suggestor',
+    docs_url='/',
 )
 
 #app.include_router(db.router, tags=['Database'])
