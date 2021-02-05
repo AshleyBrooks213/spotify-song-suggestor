@@ -32,16 +32,34 @@ app = FastAPI(
     docs_url='/',
 )
 
+import dash_bootstrap_components as dbc
+children=[
+                    dbc.CardImg(
+                        src=CUSTOMER['PNGFile'],
+                        style={
+                            'height': '30%',
+                            'width': '30%',
+                            'padding': '5px 10px 0px 10px',
+                            'position': 'relative'
+                        },
+                    ), (edited) 
+
+CUSTOMER = {
+    ...
+    'PNGFile': '/app/newplot.png',
+    ...
+}
+
 app.include_router(model.router, tags=['Model'])
 #app.include_router(viz.router, tags=['Visualization'])
 #app.include_router(db.router, tags=['Database'])
 #app.include_router(ml.router, tags=['Machine Learning'])
 #app.include_router(ml2.router, tags=['Machine Learning 2'])
 
-from fastapi.responses import FileResponse
-@app.get("/")
-async def main():
-    return FileResponse("newplot.png")
+# from fastapi.responses import FileResponse
+# @app.get("/")
+# async def main():
+#     return FileResponse("app/newplot.png")
 
 app.add_middleware(
     CORSMiddleware,
