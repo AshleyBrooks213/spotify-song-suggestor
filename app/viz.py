@@ -6,8 +6,6 @@ import plotly.express as px
 import plotly.graph_objects as go
 import numpy as np
 
-plot_songs_attributes_boxplots(plotly_df)
-
 router = APIRouter()
 df_plot = pd.read_csv('app/results.csv')
 
