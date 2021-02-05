@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 
-from app import db, ml, viz, ml2, model
+from app import db, ml, viz, model
 
 description = """
 This web app is designed to predict the top 10 songs a user may be interested in,
