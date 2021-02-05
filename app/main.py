@@ -22,6 +22,9 @@ To use these interactive docs:
 - Scroll down to see the Server response Code & Details
 \n
 \n
+<img src="https://github.com/boscolio/spotify-song-suggestor/blob/main/app/newplot.png" width="40%" /> <img src="https://github.com/boscolio/spotify-song-suggestor/blob/main/app/newplot.png" width="30%" />
+\n
+\n
 Created by: 
 Nicholas Adamski - Ashley Brooks - Ricky Chance - Shannon Li
 """
