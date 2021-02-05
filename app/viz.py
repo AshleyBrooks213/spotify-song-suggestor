@@ -7,7 +7,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import numpy as np
 from app import model
-from model import df_nn
+from app.model import df_nn
 
 log = logging.getLogger(__name__)
 router = APIRouter()
