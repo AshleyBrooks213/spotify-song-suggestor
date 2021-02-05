@@ -14,7 +14,6 @@ from pickle import dump
 log = logging.getLogger(__name__)
 router = APIRouter()
 
-url = 'https://raw.githubusercontent.com/boscolio/spotify_data/main/spotify.csv'
 path = 'app/spotify.csv'
 
 df = pd.read_csv(path, index_col=[0])

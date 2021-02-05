@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 
-from app import db, ml, viz, ml2, model
+from app import db, ml, viz, model
 
 description = """
 This web app is designed to predict the top 10 songs a user may be interested in,
@@ -20,20 +20,25 @@ To use these interactive docs:
     your returned predictions on.
 - Click the **Execute** button
 - Scroll down to see the Server response Code & Details
+\n
+\n
+<img src="https://raw.githubusercontent.com/boscolio/spotify-song-suggestor/main/app/newplot.png" width ="100%"/>
+\n
+\n
 Created by: 
 Nicholas Adamski - Ashley Brooks - Ricky Chance - Shannon Li
 """
+
 app = FastAPI(
     title='Spotify Song Suggestor',
     description=description,
-    docs_url='/https://github.com/AshleyBrooks213/spotify-song-suggestor',
+    docs_url='/',
 )
 
+app.include_router(model.router, tags=['Model'])
+#app.include_router(viz.router, tags=['Visualization'])
 #app.include_router(db.router, tags=['Database'])
 #app.include_router(ml.router, tags=['Machine Learning'])
-#app.include_router(viz.router, tags=['Visualization'])
-#app.include_router(ml2.router, tags=['Machine Learning 2'])
-app.include_router(model.router, tags=['Model'])
 
 app.add_middleware(
     CORSMiddleware,
