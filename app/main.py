@@ -22,7 +22,7 @@ To use these interactive docs:
 - Scroll down to see the Server response Code & Details
 \n
 \n
-<img src="https://raw.githubusercontent.com/boscolio/spotify-song-suggestor/main/app/newplot.png" width ="80%"/>
+<img src="https://raw.githubusercontent.com/boscolio/spotify-song-suggestor/main/app/newplot.png" width ="100%"/>
 \n
 \n
 Created by: 
@@ -39,7 +39,6 @@ app.include_router(model.router, tags=['Model'])
 #app.include_router(viz.router, tags=['Visualization'])
 #app.include_router(db.router, tags=['Database'])
 #app.include_router(ml.router, tags=['Machine Learning'])
-#app.include_router(ml2.router, tags=['Machine Learning 2'])
 
 app.add_middleware(
     CORSMiddleware,
