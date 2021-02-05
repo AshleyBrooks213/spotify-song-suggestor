@@ -22,7 +22,7 @@ To use these interactive docs:
 - Scroll down to see the Server response Code & Details
 \n
 \n
-<img src="https://raw.githubusercontent.com/boscolio/spotify-song-suggestor/main/app/newplot.png" width="40%" />
+<img src="https://raw.githubusercontent.com/boscolio/spotify-song-suggestor/main/app/newplot.png" width="80" />
 \n
 \n
 Created by: 
