@@ -10,7 +10,7 @@ router = APIRouter()
 df = pd.read_csv('app/results.csv')
 
 @router.get('/viz')
-async def viz(df):
+async def viz(df=df):
     """
     ### Response
     JSON string to render with [react-plotly.js](https://plotly.com/javascript/react/)
