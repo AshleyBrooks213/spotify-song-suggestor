@@ -1,3 +1,7 @@
+# Spotify Song Suggetor
+Click this link to view the app!
+https://spotify-suggestion-dsft-3.herokuapp.com/
+
 # DS Build Week scaffold
 
 - [Big picture](#big-picture)
