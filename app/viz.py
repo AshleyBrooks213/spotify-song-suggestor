@@ -6,7 +6,9 @@ import plotly.express as px
 import plotly.graph_objects as go
 import numpy as np
 
+log = logging.getLogger(__name__)
 router = APIRouter()
+
 df = pd.read_csv('app/results.csv')
 
 @router.get('/viz')
