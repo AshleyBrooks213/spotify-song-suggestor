@@ -7,10 +7,10 @@ import plotly.graph_objects as go
 import numpy as np
 
 router = APIRouter()
-df_plot = pd.read_csv('app/results.csv')
+df = pd.read_csv('app/results.csv')
 
 @router.get('/viz')
-async def viz(df=df_plot):
+async def viz(df):
     """
     ### Response
     JSON string to render with [react-plotly.js](https://plotly.com/javascript/react/)
@@ -33,4 +33,4 @@ async def viz(df=df_plot):
     
     fig.update_layout(title_text = 'Distribution of Predicted Songs\' Attributes')
 
-    return fig
+    return fig.json
