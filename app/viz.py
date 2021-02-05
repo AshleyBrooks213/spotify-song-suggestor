@@ -35,4 +35,4 @@ async def viz(df=df_plot):
     
     fig.update_layout(title_text = 'Distribution of Predicted Songs\' Attributes')
 
-    return fig.to_json()
+    return fig
