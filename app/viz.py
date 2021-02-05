@@ -21,8 +21,8 @@ async def viz(df=df_results):
 
     #cols = ['acousticness',	'danceability', 'energy', 'instrumentalness', 'key',
     #    'liveness', 'loudness',	'popularity', 'speechiness', 'tempo', 'valence']
-    fig = go.Figure()
-    fig.add_trace(go.Box(x=df.loc['acousticness'], name='acousticness'))
+    #fig = go.Figure()
+    #fig.add_trace(go.Box(x=df['acousticness'], name='acousticness'))
     # fig.add_trace(go.Box(x=df.danceability, name = "danceability"))
     # fig.add_trace(go.Box(x=df.energy, name = "energy"))
     # fig.add_trace(go.Box(x=df.instrumentalness, name = "instrumentalness"))
@@ -34,6 +34,6 @@ async def viz(df=df_results):
     # fig.add_trace(go.Box(x=df.tempo, name = "tempo"))
     # fig.add_trace(go.Box(x=df.valence, name = "valence"))
     
-    fig.update_layout(title_text = 'Distribution of Predicted Songs\' Attributes')
+    #fig.update_layout(title_text = 'Distribution of Predicted Songs\' Attributes')
 
-    return fig
+    return df
