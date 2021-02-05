@@ -38,6 +38,10 @@ app.include_router(model.router, tags=['Model'])
 #app.include_router(ml.router, tags=['Machine Learning'])
 #app.include_router(ml2.router, tags=['Machine Learning 2'])
 
+from fastapi.responses import FileResponse
+@app.get("/")
+async def main():
+    return FileResponse("newplot.png")
 
 app.add_middleware(
     CORSMiddleware,
