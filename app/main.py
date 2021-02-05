@@ -33,7 +33,7 @@ app = FastAPI(
 )
 
 app.include_router(model.router, tags=['Model'])
-app.include_router(viz.router, tags=['Visualization'])
+#app.include_router(viz.router, tags=['Visualization'])
 #app.include_router(db.router, tags=['Database'])
 #app.include_router(ml.router, tags=['Machine Learning'])
 #app.include_router(ml2.router, tags=['Machine Learning 2'])
