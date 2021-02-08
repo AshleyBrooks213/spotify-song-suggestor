@@ -2,6 +2,10 @@
 Click this link to view the app!
 https://spotify-suggestion-dsft-3.herokuapp.com/
 
+Click this link to view the notebook!
+https://colab.research.google.com/drive/1P9Tt9Q8Z4tNfg5W4W5CQxE5h0wol15aA?usp=sharing
+
+
 # DS Build Week scaffold
 
 - [Big picture](#big-picture)
